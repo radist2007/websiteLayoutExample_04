@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+.header__wrap {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: top;
+    padding-top: 30px;
+}
+.header__line {
+    position: absolute;
+    border-bottom: 1px solid #3e9ee7;
+    height: 100px;
+    width: 100%;
+    z-index: 10;
+}
+.header__logo {
+    z-index: 20;
+    margin-top: -5px;
+    /* padding-top: 33px; */
+}
+.header__logo a {
+    font-family: MontserratRegular, sans-serif;
+    font-size: 36px;
+    /* line-height: 30px; */
+    color: #fff;
+}
+.header__nav {
+    z-index: 20;
+    /* margin-top: -5px; */
+    /* padding-top: 35px; */
+}
+.header__nav a {
+    font-family: RalewaySemiBold, sans-serif;
+    font-size: 14px;
+    height: 14px;
+    line-height: 42px;
+    color: #fff;
+    margin-left: 28px;
+    cursor: pointer;
+}
+.hero {
+    height: 1000px;
+    /* height: 100vh; */
+    background-image: url(../img/hero_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+}
+.hero__wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 230px;
+    /* background-color: #fff; */
+}
+.hero__content {
+    /* background-color: green; */
+    padding-top: 165px;
+    display: inline-block;
+    width: 57%;
+    height: 770px;
+}
+.hero__content h1 {
+    font-family: RalewayLight, sans-serif;
+    font-size: 54px;
+    line-height: 64px;
+    color: #fff;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+.hero__content h1>span {
+    font-family: RalewayBold, sans-serif;
+    font-weight: 700;
+}
+.hero__content p {
+    font-family: RalewayRegular, sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 60px;
+
+}
+.hero__content .hero__btn-watch {
+    font-family: RalewaySamiBold, sans-serif;
+    font-size: 14px;
+    color: #2095f2;
+    background-color: #fff;
+    height: 54px;
+    width: 165px;
+    border: none;
+    border-radius: 50px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.hero__content .hero__btn-download {
+    font-family: RalewaySamiBold, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0f8ae2;
+    height: 54px;
+    width: 165px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.hero__img {
+    /* background-color: yellow; */
+    position: relative;
+    /* width: 41.66666667%; */
+    /* margin-right: -200px; */
+    /* width: calc(12 * 4 / 100); */
+    width: 40%;
+    /* width: 100px; */
+}
+.hero__img img {
+    position: absolute;
+    left: 100px;
+}
+
+.hero__icons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 40;
+}
+.hero__icon-android, .hero__icon-apple, .hero__icon-windows {
+    height: 60px;
+    width: 70px;
+    background-color: #fff;
+    margin-right: 10px;
+    margin-bottom: 160px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-size: contain; */
+}
+.hero__icon-android {
+    background-image: url(../icons/android.png);
+}
+.hero__icon-apple {
+    background-image: url(../icons/apple.png);
+}
+.hero__icon-windows {
+    background-image: url(../icons/windows.png);
+}
+
+.aboutApp {
+    height: 645px;
+    background-color: #f4f4f4;
+}
