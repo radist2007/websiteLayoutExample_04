@@ -4,6 +4,10 @@
 }
 a {
     text-decoration: none;
+    outline: none;
+}
+button {
+    outline: none;
 }
 .container {
     max-width: 1170px;
@@ -11,14 +15,16 @@ a {
     position: relative;
     padding: 0;
 }
+/* HEADER */
 .header__wrap {
     position: absolute;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     vertical-align: top;
     padding-top: 30px;
+    min-width: 1170px;
+    z-index: 10;
 }
 .header__line {
     position: absolute;
@@ -30,18 +36,14 @@ a {
 .header__logo {
     z-index: 20;
     margin-top: -5px;
-    /* padding-top: 33px; */
 }
 .header__logo a {
     font-family: MontserratRegular, sans-serif;
     font-size: 36px;
-    /* line-height: 30px; */
     color: #fff;
 }
 .header__nav {
     z-index: 20;
-    /* margin-top: -5px; */
-    /* padding-top: 35px; */
 }
 .header__nav a {
     font-family: RalewaySemiBold, sans-serif;
@@ -52,9 +54,10 @@ a {
     margin-left: 28px;
     cursor: pointer;
 }
+/* END HEADER */
+/* HERO */
 .hero {
     height: 1000px;
-    /* height: 100vh; */
     background-image: url(../img/hero_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,14 +69,12 @@ a {
     display: flex;
     justify-content: space-between;
     padding-top: 230px;
-    /* background-color: #fff; */
 }
 .hero__content {
-    /* background-color: green; */
-    padding-top: 165px;
+    padding-top: 115px;
     display: inline-block;
     width: 57%;
-    height: 770px;
+    height: 820px;
 }
 .hero__content h1 {
     font-family: RalewayLight, sans-serif;
@@ -107,6 +108,10 @@ a {
     margin-right: 30px;
     cursor: pointer;
 }
+.hero__content .hero__btn-watch>i {
+    margin-right: 10px;
+    font-size: 16px;
+}
 .hero__content .hero__btn-download {
     font-family: RalewaySamiBold, sans-serif;
     font-size: 14px;
@@ -118,20 +123,22 @@ a {
     border-radius: 50px;
     cursor: pointer;
 }
+.hero__content .hero__btn-watch:hover {
+    background-color: #63b2eb;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.hero__content .hero__btn-download:hover {
+    background-color: #63b2eb;
+}
 .hero__img {
-    /* background-color: yellow; */
     position: relative;
-    /* width: 41.66666667%; */
-    /* margin-right: -200px; */
-    /* width: calc(12 * 4 / 100); */
     width: 40%;
-    /* width: 100px; */
 }
 .hero__img img {
     position: absolute;
     left: 100px;
 }
-
 .hero__icons {
     position: absolute;
     left: 50%;
@@ -148,7 +155,8 @@ a {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center center;
-    /* background-size: contain; */
+    /* box-shadow: 0 -1px 21px #000; */
+    /* margin-bottom: -10px; */
 }
 .hero__icon-android {
     background-image: url(../icons/android.png);
@@ -159,8 +167,73 @@ a {
 .hero__icon-windows {
     background-image: url(../icons/windows.png);
 }
-
+/* END HERO */
+/* ABOUT APP */
 .aboutApp {
     height: 645px;
-    background-color: #f4f4f4;
+    background-image: url(../img/aboutApp_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
+.aboutApp__wrap {
+    position: relative;
+    padding-top: 125px;
+}
+.aboutApp__heroShadows {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 40;
+}
+.aboutApp__heroShadow-android, .aboutApp__heroShadow-apple, .aboutApp__heroShadow-windows {
+    height: 1px;
+    width: 70px;
+    margin-top: -1px;
+    margin-right: 10px;
+    margin-bottom: 160px;
+    display: inline-block;
+    box-shadow: 0 2px 12px #000;
+}
+.aboutApp__content {
+    width: 50%;
+    margin-left: 50%;
+}
+.aboutApp__content h2 {
+    font-family: RalewayLight, sans-serif;
+    font-size: 36px;
+    line-height: 26px;
+    margin-bottom: 45px;
+}
+.aboutApp__content h2>span {
+    font-family: RalewaySemiBold, sans-serif;
+}
+.aboutApp__content p {
+    font-family: RalewayMedium, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 40px;
+}
+.aboutApp__content-btns {
+    display: flex;
+    justify-content: space-between;
+
+}
+.aboutApp__content-btn {
+    height: 72px;
+    width: 165px;
+    background-color: #2095f2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.aboutApp__content-btn:hover {
+    background-color: #056fc7;
+}
+.aboutApp__content-btn>i {
+    margin-right: 8px;
+}
+
+/* END ABOUT APP */

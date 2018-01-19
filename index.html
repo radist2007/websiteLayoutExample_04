@@ -7,6 +7,7 @@
     <title>websiteLayoutExample_04</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <!-- <link rel="stylesheet" href="styles/bootstrap.css"> -->
+    <link rel="stylesheet" href="styles/font-awesome.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -43,7 +44,7 @@
                 <div class="hero__content">
                     <h1>A Creative Landing Page to <span>Showcase</span> Your App</h1>
                     <p>Lonsectur adisicing elit, sed do eiusmod tempor inct ut labore et dolore magna aliqua in enim ad minim ullamco laboris nisi ut aliquip enim ad minim.</p>
-                    <button class="hero__btn-watch">Watch Video</button>
+                    <button class="hero__btn-watch"><i class="fa fa-caret-right" aria-hidden="true"></i>Watch Video</button>
                     <button class="hero__btn-download">Download Now</button>
                 </div>
                 <div class="hero__img">
@@ -62,17 +63,19 @@
     <section class="aboutApp">
         <div class="container">
             <div class="aboutApp__wrap">
-                <div class="aboutApp__img">
-                    <img src="img/aboutApp_img.png" alt="img">
+                <div class="aboutApp__heroShadows">
+                    <div class="aboutApp__heroShadow-android"></div>
+                    <div class="aboutApp__heroShadow-apple"></div>
+                    <div class="aboutApp__heroShadow-windows"></div>
                 </div>
                 <div class="aboutApp__content">
-                    <h2>About app</h2>
+                    <h2>About <span>App</span></h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolores numquam, maxime architecto optio a tenetur commodi neque deleniti aperiam. Curabitur blan dit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus nibh.</p>
                     <p>Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
                     <div class="aboutApp__content-btns">
-                        <button class="aboutApp__btn-high">High Security</button>
-                        <button class="aboutApp__btn-user">User Friendly</button>
-                        <button class="aboutApp__btn-Best">Best UI/UX</button>
+                        <button class="aboutApp__content-btn aboutApp__btn-high"><i class="fa fa-shield" aria-hidden="true"></i>High Security</button>
+                        <button class="aboutApp__content-btn aboutApp__btn-user"><i class="fa fa-headphones" aria-hidden="true"></i>User Friendly</button>
+                        <button class="aboutApp__content-btn aboutApp__btn-Best"><i class="fa fa-paint-brush" aria-hidden="true"></i>Best UI/UX</button>
                     </div>
                 </div>
             </div>
