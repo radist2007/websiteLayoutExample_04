@@ -1,3 +1,4 @@
+/* ==================================== COMMON ==================================== */
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +10,62 @@ a {
 button {
     outline: none;
 }
-.container {
+.title {
+    padding-top: 130px;
+    text-align: center;
+}
+
+.title h2 {
+    font-family: RalewayLight, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 40px;
+}
+.title h2>span {
+    font-family: RalewaySemiBold, sans-serif;
+    font-size: 36px;
+    line-height: 27px;
+}
+.phoneLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+.phoneLine i {
+    font-size: 18px;
+    color: #2095f2;
+}
+.phoneLine b {
+    color: #2095f2;
+    margin-top: -10px;
+}
+.phoneLine-left {
+    margin-right: 20px;
+}
+.phoneLine-right {
+    margin-left: 20px;
+}
+.title p {
+    font-family: RalewayMedium, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 87px;
+    color: #676767;
+}
+
+/* .container {
     max-width: 1170px;
     margin: 0 auto;
     position: relative;
     padding: 0;
-}
-/* HEADER */
+} */
+/* ==================================== END COMMON ==================================== */
+/* ==================================== HEADER ==================================== */
 .header__wrap {
     position: absolute;
     display: flex;
@@ -54,8 +104,8 @@ button {
     margin-left: 28px;
     cursor: pointer;
 }
-/* END HEADER */
-/* HERO */
+/* ==================================== END HEADER ==================================== */
+/* ==================================== HERO ==================================== */
 .hero {
     height: 1000px;
     background-image: url(../img/hero_bg.png);
@@ -167,8 +217,8 @@ button {
 .hero__icon-windows {
     background-image: url(../icons/windows.png);
 }
-/* END HERO */
-/* ABOUT APP */
+/* ==================================== END HERO ==================================== */
+/* ==================================== ABOUT APP ==================================== */
 .aboutApp {
     height: 645px;
     background-image: url(../img/aboutApp_bg.png);
@@ -237,3 +287,220 @@ button {
 }
 
 /* END ABOUT APP */
+/* AWESOME FEATURES */
+.awesomeFeatures {
+    height: 1120px;
+    background-color: #fff;
+}
+.awesomeFeatures__wrap {
+
+}
+.awesomeFeatures__title {
+    padding-top: 130px;
+    text-align: center;
+}
+.awesomeFeatures__title h2 {
+    font-family: RalewayLight, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 40px;
+}
+.awesomeFeatures__title h2>span {
+    font-family: RalewaySemiBold, sans-serif;
+}
+.awesomeFeatures__phoneLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+.awesomeFeatures__phoneLine i {
+    font-size: 18px;
+    color: #2095f2;
+}
+.awesomeFeatures__phoneLine b {
+    color: #2095f2;
+    margin-top: -10px;
+}
+.awesomeFeatures__phoneLine-left {
+    margin-right: 20px;
+}
+.awesomeFeatures__phoneLine-right {
+    margin-left: 20px;
+}
+.awesomeFeatures__title p {
+    font-family: RalewayMedium, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 87px;
+}
+.awesomeFeatures__content {
+    display: flex;
+}
+.awesomeFeatures__features {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px;
+}
+.feature {
+    /* margin-top: 75px; */
+    display: flex;
+    margin-bottom: 45px;
+}
+.feature-right {
+    float: right;
+    text-align: right;
+}
+.feature-left {
+    float: left;
+    text-align: left;
+}
+.feature h3 {
+    font-family: RalewayMedium, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #333;
+    margin-bottom: 30px;
+    /* float: right; */
+}
+.feature p {
+    font-family: RalewayMedium, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    color: #676767;
+}
+.feature__img {
+    margin: 0 30px;
+}
+/* END AWESOME FEATURES */
+/* VIDEO */
+.video {
+    height: 600px;
+    background-image: url(../img/video_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.video img {
+    margin-top: 237px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.video h2 {
+    font-family: RalewaySemiBold, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #fff;
+}
+/* END VIDEO */
+/* CUSTOMIZE */
+.customize {
+    height: 920px;
+}
+.customize__wrap {
+    position: relative;
+}
+.customize__title {
+    text-align: center;
+}
+.customize__title h2 {
+    font-family: RalewayLight, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 27px;
+}
+.customize__title h2>span {
+    font-family: RalewaySemiBold, sans-serif;
+    font-size: 36px;
+    line-height: 27px;
+}
+.customize__block {
+    /* background-color: red; */
+    margin-bottom: 58px;
+    display: flex;
+    flex-direction: row;
+}
+.customize__block .textblock {
+    /* width: 58%; */
+    /* background-color: yellow; */
+}
+.customize__block h3 {
+    margin-bottom: 20px;
+    font-family: RalewayMedium, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+}
+.customize__block p {
+    font-family: RalewayMedium, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    color: #676767;
+    
+}
+.block__img {
+    margin: 0 30px;
+}
+.customize__wrap #customize_phone-withe {
+    position: absolute;
+    top: 346px;
+    right: 237px;
+}
+.customize__wrap #customize_phone-bleck {
+    position: absolute;
+    top: 346px;
+    right: 127px;
+}
+/* END CUSTOMIZE */
+
+/* ==================================== USER CREATIVE ==================================== */
+.userCreative {
+    height: 740px;
+    background-color: #2095f2;
+}
+.userCreative h2, .userCreative h3, .userCreative p, .userCreative .phoneLine b,.userCreative .phoneLine i {
+    color: #fff;
+}
+.userCreative__content {
+    display: flex;
+    justify-content: center;
+}
+.userCreative__block {
+    position: relative;
+    flex-grow: 1;
+    height: 230px;
+    border: 1px solid #7fbeef;
+    margin: 0 15px;
+}
+.userCreative__block img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.userCreative__block h3 {
+    font-family: RalewayMedium, sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 26px;
+}
+.userCreative__block h3,.userCreative__block p {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto 30px;
+}
+.userCreative__block {
+    padding-top: 60px;
+
+}
+
+/* ==================================== END USER CREATIVE ==================================== */
+/* ==================================== COMMON ==================================== */
