@@ -1,0 +1,37 @@
+{
+  "name": "web-site-layout-example_04",
+  "version": "1.0.0",
+  "description": "Web site layput example 04",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radist2007/websiteLayoutExample_04.git"
+  },
+  "keywords": [
+    "websiteLayoutExample_04"
+  ],
+  "author": "Radist2007webDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radist2007/websiteLayoutExample_04/issues"
+  },
+  "homepage": "https://github.com/radist2007/websiteLayoutExample_04#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "imagemin-pngquant": "^5.0.1"
+  },
+  "dependencies": {}
+}

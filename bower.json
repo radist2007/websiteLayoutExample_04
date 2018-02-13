@@ -1,0 +1,26 @@
+{
+  "name": "wsloe04",
+  "description": "Web site layput example 04",
+  "main": "index.js",
+  "authors": [
+    "Radist2007webDev"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "websiteLayoutExample_04"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.3.1",
+    "normalize-css": "normalize.css#^7.0.0",
+    "slick": "*"
+  }
+}

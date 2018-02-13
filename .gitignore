@@ -1,2 +1,4 @@
 # git ignore
-AppsPress-Landing-Page-Template/
+node_modules/
+bower_components/
+src/lib/
