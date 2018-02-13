@@ -17,25 +17,31 @@ var production = env === "production" ? true : false;
 
 var path = {
 	build: {
-		html: 'build/',
-		js: 'build/js/',
+		html:   'build/',
+		js:     'build/js/',
 		styles: 'build/styles/',
-		img: 'build/img/',
-		fonts: 'build/fonts/',
+		img:    'build/img/',
+		fonts:  'build/fonts/',
+		icons:  'build/icons/',
+		video:  'build/video/',
 	},
 	src: {
-		html: 'src/*.html',
-		js: 'src/js/*.js',
+		html:   'src/*.html',
+		js:     'src/js/*.js',
 		styles: 'src/styles/*.css',
-		img: 'src/img/**/*.*',
-		fonts: 'src/fonts/**/*.*',
+		img:    'src/img/**/*.*',
+		fonts:  'src/fonts/**/*.*',
+		icons:  'src/icons/**/*.*',
+		video:  'src/video/**/*.*',
 	},
 	watch: {
-		html: 'src/**/*.html',
-		js: 'src/js/**/*.js',
-		styles: 'src/styles/**/*.css',
-		img: 'src/img/**/*.*',
-		fonts: 'src/fonts/**/*.*',
+		html:    'src/**/*.html',
+		js:      'src/js/**/*.js',
+		styles:  'src/styles/**/*.css',
+		img:     'src/img/**/*.*',
+		fonts:   'src/fonts/**/*.*',
+		icons:   'src/icons/**/*.*',
+		video:   'src/video/**/*.*',
 	}
 };
 
@@ -59,25 +65,26 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js) 
         // .pipe(rigger()) 
-        .pipe(gulpIf(production, sourcemaps.init()))
+        // .pipe(gulpIf(production, sourcemaps.init())) //Инициализируем sourcemap
         .pipe(gulpIf(production, uglify()))
-        .pipe(gulpIf(production, sourcemaps.write()))
+        // .pipe(gulpIf(production, concat('bundle.js')))//Склеиваем js-ы в один фаил
+        // .pipe(gulpIf(production, sourcemaps.write()))//Пропишем карты
         .pipe(gulpIf(production, gulp.dest(path.build.js)))
         .pipe(reload({stream: true}));
 });
 
 gulp.task('styles:build', function () {
-    gulp.src(path.src.styles) 
-        .pipe(gulpIf(production, sourcemaps.init()))
+    gulp.src(path.src.styles) //Выберем наши css
+        // .pipe(gulpIf(production, sourcemaps.init())) //Инициализируем sourcemap
         // .pipe(sass({
         //     sourceMap: true,
         //     errLogToConsole: true
         // }))
-        .pipe(gulpIf(production, autoprefixer()))
-		.pipe(gulpIf(production, cleanCSS()))
-		.pipe(gulpIf(production, concat('bundle.css')))
-        .pipe(gulpIf(production, sourcemaps.write()))
-        .pipe(gulpIf(production, gulp.dest(path.build.styles)))
+        .pipe(gulpIf(production, autoprefixer()))//Добавим вендорные префиксы
+        .pipe(gulpIf(production, cleanCSS()))//Сжимаем CSS-ы
+        // .pipe(gulpIf(production, concat('bundle.css')))//Склеиваем CSS-ы в один фаил
+        // .pipe(gulpIf(production, sourcemaps.write()))//Пропишем карты
+        .pipe(gulpIf(production, gulp.dest(path.build.styles)))//Выкладываем в build
         .pipe(reload({stream: true}));
 });
 
@@ -99,12 +106,25 @@ gulp.task('fonts:build', function() {
         .pipe(reload({stream: true}));
 });
 
+gulp.task('icons:build', function() {
+    gulp.src(path.src.icons)
+        .pipe(gulpIf(production, gulp.dest(path.build.icons)))
+        .pipe(reload({stream: true}));
+});
+gulp.task('video:build', function() {
+    gulp.src(path.src.video)
+        .pipe(gulpIf(production, gulp.dest(path.build.video)))
+        .pipe(reload({stream: true}));
+});
+
 gulp.task('build', [
 	'html:build',
 	'js:build',
 	'styles:build',
 	'fonts:build',
 	'img:build',
+	'icons:build',
+	'video:build',
 ]);
 
 gulp.task('webserver', function(){
@@ -127,7 +147,6 @@ gulp.task('watch', function(){
 	watch([path.watch.fonts], function(event, cb){
 		gulp.start('fonts:build');
 	});
-
 });
 
 gulp.task('default', ['build','webserver','watch', ], function(){

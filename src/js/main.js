@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function(){
     var btn = document.getElementById("videoBtn");
 
     // Fan Fact
-    let counterStarted = false;
-    let time = 2;
+    var counterStarted = false;
+    var time = 2;
 
     // hamburger.addEventListener('click', openNavBar, false);
     btn.addEventListener("click", videoPlay, false);
@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // Fan Fact
     $(window).on("scroll", function(){
-        let topWindow = $(window).scrollTop();
-        let vh = $(window).height();
+        var topWindow = $(window).scrollTop();
+        var vh = $(window).height();
 
         if(!counterStarted) {
             $('#counter').each(function(){
-                let counterPos = $(this).offset().top;
+                var counterPos = $(this).offset().top;
                 if((counterPos < topWindow + vh / 1.5)) {
                     $('.fanFact h2').each(function(){
                         var i = 1;
